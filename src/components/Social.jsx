@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -7,18 +8,18 @@ import {
 
 function Social() {
   return (
-    <ul className="text-4xl text-gray-600 list-none pl-0 my-16">
-      <li className="mr-2 inline-block hover:text-violet-600">
+    <ul className="text-2xl text-gray-300 list-none pl-0 py-8">
+      <li className="mx-2 inline-block hover:text-white hover:scale-150">
         <a href="#">
           <FontAwesomeIcon icon={faTwitter} />
         </a>
       </li>
-      <li className="mx-2 inline-block hover:text-violet-600">
+      <li className="mx-2 inline-block hover:text-white hover:scale-150">
         <a href="#">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </li>
-      <li className="mx-2 inline-block hover:text-violet-600">
+      <li className="mx-2 inline-block hover:text-white hover:scale-150">
         <a href="#">
           <FontAwesomeIcon icon={faGithub} />
         </a>

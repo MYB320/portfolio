@@ -29,7 +29,7 @@ function Main({ page, onClickDown, onClickUp }) {
     <>
       <div className="flex flex-col w-[80vw] py-6 px-12 min-h-screen">
         {up()}
-        <div className="my-auto ">{page.component}</div>
+        <div className="my-auto mx-auto">{page.component}</div>
         {down()}
       </div>
     </>
