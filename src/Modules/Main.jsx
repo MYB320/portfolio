@@ -1,39 +1,16 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import NextPage from '../components/NextPage'
+import PrevPage from '../components/PrevPage'
 
-function Main({ page, onClickDown, onClickUp }) {
-  const up = () => {
-    if (!page.id <= 0)
-      return (
-        <button
-          onClick={onClickUp}
-          className="text-center text-4xl text-gray-400 hover:text-violet-800"
-        >
-          <FontAwesomeIcon icon={faAngleUp} />
-        </button>
-      );
-  };
-  const down = () => {
-    if (page.id <= 4)
-      return (
-        <button
-          onClick={onClickDown}
-          className="text-center text-4xl text-gray-400 hover:text-violet-800"
-        >
-          <FontAwesomeIcon icon={faAngleDown} />
-        </button>
-      );
-  };
-
+function Main({ page, onClickNext, onClickPrev }) {
   return (
     <>
-      <div className="flex flex-col w-[80vw] py-6 px-12 min-h-screen">
-        {up()}
-        <div className="my-auto mx-auto">{page.component}</div>
-        {down()}
+      <div className='flex flex-col w-screen px-12 min-h-screen'>
+        <PrevPage pageId={page.id} onClick={onClickPrev} />
+        <div className='my-auto'>{page.component}</div>
+        <NextPage pageId={page.id} onClick={onClickNext} />
       </div>
     </>
-  );
+  )
 }
 
-export default Main;
+export default Main

@@ -1,12 +1,20 @@
-const NavLink = ({ onClick, name }) => {
+const NavLink = ({ onClick, page, Id }) => {
+  let color = 'text-slate-300 hover:text-white'
+
+  if (Id === page.id) {
+    color = 'text-white scale-125'
+  }
   return (
     <button
-      className="p-2 text-gray-300 hover:text-white hover:scale-125 uppercase text-base font-semibold"
+      className={
+        'p-2 transition-all transform hover:scale-150 uppercase text-base font-semibold ' +
+        color
+      }
       onClick={onClick}
     >
-      {name}
+      {page.name}
     </button>
-  );
-};
+  )
+}
 
-export default NavLink;
+export default NavLink

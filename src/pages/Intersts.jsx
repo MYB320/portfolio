@@ -1,11 +1,11 @@
 function Intersts() {
   return (
     <div>
-      <h1 className="about text-6xl uppercase font-bold	text-gray-800">
+      <h1 className='about text-6xl uppercase font-bold	text-slate-800 dark:text-white'>
         Intersts
       </h1>
     </div>
-  );
+  )
 }
 
-export default Intersts;
+export default Intersts
