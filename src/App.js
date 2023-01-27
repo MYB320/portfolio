@@ -1,8 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Nav from './Modules/Nav'
 import Main from './Modules/Main'
-
 import pages from './pages'
 
 function App() {
@@ -10,13 +9,14 @@ function App() {
   let [darkToggle, setDarkToggle] = useState(false)
 
   const toggleDark = () => setDarkToggle(!darkToggle)
-  const GoToPage = (id) => {
-    setpageId(id)
-  }
+  const GoToPage = (id) => setpageId(id)
+
   const Next = () => {
     const newId = pageId + 1
     setpageId(newId)
-    if (newId >= 6) {
+    console.log(newId)
+    console.log(pageId)
+    if (newId >= pages.length + 1) {
       setpageId(0)
     }
   }
@@ -27,9 +27,20 @@ function App() {
       setpageId(0)
     }
   }
+
+  const [color, setcolor] = useState(
+    'bg-svg-blob-white-indigo-600 dark:bg-svg-blob-dark-indigo-600'
+  )
+  const pbgc = pages[pageId].bgColor
+  useEffect(() => {
+    setcolor(pbgc)
+  }, [pbgc])
+
   return (
     <div className={`${darkToggle && 'dark'}`}>
-      <div className='bg-white dark:bg-slate-800 flex h-screen w-screen'>
+      <div
+        className={`transition-all flex h-screen w-screen bg-img transition-all ${color}`}
+      >
         <Nav
           pages={pages}
           GoToPage={GoToPage}

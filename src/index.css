@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    .about {
-        font-family: 'Saira Extra Condensed';
-    }
+.bg-img{
+    @apply bg-center bg-cover bg-no-repeat;
 }

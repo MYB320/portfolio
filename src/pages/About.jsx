@@ -11,13 +11,13 @@ function About() {
   return (
     <div>
       <ContactMe isOpen={isOpen} onClose={contactMe} />
-      <h1 className='about text-8xl font-bold	text-slate-800 dark:text-white'>
+      <h1 className='font-Saira text-8xl font-bold	text-gray-800 dark:text-white'>
         Mohamed Yasser{' '}
         <span className='text-indigo-500 transition-all hover:underline'>
           Boureghida
         </span>
       </h1>
-      <div className='about mb-5 text-xl font-medium uppercase text-slate-500 dark:text-slate-300'>
+      <div className='font-Saira mb-5 text-xl font-medium uppercase text-slate-500 dark:text-slate-300'>
         <>Collo · Skikda, Algeria · +213 (0) 667 56 90 32 · </>
         <a
           className='text-indigo-500 transition-all hover:text-indigo-600 hover:underline'
@@ -31,7 +31,7 @@ function About() {
         productively in dynamic environments. Experience in leveraging agile
         frameworks to provide a robust synopsis for high level overviews.
       </p>
-      <div className='flex w-96 about mt-12'>
+      <div className='flex w-96 mt-12 font-Saira '>
         <a href={resume} download>
           <button className='text-2xl uppercase text-slate-600 dark:text-slate-300 transition-all hover:text-indigo-600 hover:underline mr-6'>
             <FontAwesomeIcon className='mr-2' icon={faDownload} />

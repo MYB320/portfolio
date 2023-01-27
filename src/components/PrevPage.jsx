@@ -6,7 +6,7 @@ function PrevPage({ pageId, onClick }) {
     return (
       <button
         onClick={onClick}
-        className='transition-all hover:animate-bounce p-4 text-center text-4xl text-slate-500 hover:text-indigo-600'
+        className='transition-all hover:animate-bounce p-4 text-center text-4xl text-slate-500 hover:text-indigo-600 dark:hover:text-white'
       >
         <FontAwesomeIcon icon={faAngleUp} />
       </button>

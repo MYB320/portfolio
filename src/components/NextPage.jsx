@@ -6,7 +6,7 @@ function NextPage({ pageId, onClick }) {
     return (
       <button
         onClick={onClick}
-        className={`transition-all transform p-4 text-center text-4xl text-slate-500 hover:text-indigo-600 ${
+        className={`transition-all transform p-4 text-center text-4xl text-slate-500 hover:text-indigo-600 dark:hover:text-white ${
           pageId === 0 ? 'animate-bounce' : 'hover:animate-bounce'
         }`}
       >
